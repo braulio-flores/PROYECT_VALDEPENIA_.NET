@@ -1,0 +1,55 @@
+﻿:root {
+    --color-main: #00171f;
+    --color-second: #fff;
+    --color-third: #06A77D;
+    --color-fourth: #000;
+}
+
+body {
+    background-color: var(--color-main);
+    color: var(--color-second);
+    font-family: 'Dosis', sans-serif;
+}
+
+.logginform {
+    background: var(--color-third);
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: var(--color-fourth);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+    .logginform input[type="text"], .logginform input[type="password"] {
+        border-radius: 10px;
+        color: var(--color-main);
+        padding: 10px;
+        border: 0px;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+
+.logginUl {
+    list-style:none;
+}
+a {
+    text-decoration: none;
+}
+
+.logginform input[type="submit"] {
+    font-size: 1rem;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0px;
+}
+.logginform input[type="submit"]:hover {
+    cursor: pointer;
+}
