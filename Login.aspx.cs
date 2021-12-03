@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FinalProject.funcs;
+using FinalProject.Funciones;
 using MySql.Data.MySqlClient;
 
 namespace FinalProject
