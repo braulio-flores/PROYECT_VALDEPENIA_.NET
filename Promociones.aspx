@@ -4,19 +4,56 @@
     <br />
     <br />
     <br />
-    <asp:Label  runat="server">Nombre de la promoción: </asp:Label><asp:TextBox runat="server" ID="txtNombre"></asp:TextBox>
-    <asp:Label  runat="server">Porcentaje: </asp:Label><asp:TextBox runat="server" ID="txtPorcentaje"></asp:TextBox>
-    <asp:Label  runat="server">Descripción: </asp:Label><asp:TextBox runat="server" ID="txtDescripcion"></asp:TextBox>
-    <asp:Label  runat="server">Fecha de inicio: </asp:Label><asp:TextBox runat="server" ID="txtFechaInicio"></asp:TextBox>
-    <asp:Label  runat="server">Fecha de término: </asp:Label><asp:TextBox runat="server" ID="txtFechaTermino"></asp:TextBox>
-    <asp:Label  runat="server">Estatus: </asp:Label><asp:TextBox runat="server" ID="txtEstatus"></asp:TextBox>
-    <asp:Button runat="server" Text="Guardar" ID="BtnGuardar" OnClick="BtnGuardar_Click"/>
-    <asp:Button runat="server" Text="Modificar" ID="BtnModificar" OnClick="BtnModificar_Click"/>
-    <asp:Button runat="server" Text="Eliminar" ID="BtnEliminar" OnClick="BtnEliminar_Click"/>
-    <asp:Button runat="server" Text="Limpiar" ID="BtnLimpiar" OnClick="BtnLimpiar_Click"/>
-    <asp:Label  runat="server">ID Socio: </asp:Label><asp:TextBox runat="server" ID="txtIdSocio2"></asp:TextBox>
-    <asp:Button runat="server" Text="Rellenar por ID" ID="BtnRellenar" OnClick="BtnRellenar_Click"/>
+    <div class="row">
+        <div class="col">
+            <h1>Promociones</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Nombre de la promoción: <asp:TextBox runat="server" ID="txtNombre"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Porcentaje: <asp:TextBox runat="server" ID="txtPorcentaje"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Descripción: <asp:TextBox runat="server" ID="txtDescripcion"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Fecha de inicio: <asp:TextBox runat="server" ID="txtFechaInicio"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Fecha de término: <asp:TextBox runat="server" ID="txtFechaTermino"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Estatus: <asp:DropDownList runat="server" ID="ddlEstatus"></asp:DropDownList>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            <asp:Button runat="server" Text="Guardar" ID="BtnGuardar" OnClick="BtnGuardar_Click"/>
+            <asp:Button runat="server" Text="Modificar" ID="BtnModificar" OnClick="BtnModificar_Click"/>
+            <asp:Button runat="server" Text="Eliminar" ID="BtnEliminar" OnClick="BtnEliminar_Click"/>
+            <asp:Button runat="server" Text="Limpiar" ID="BtnLimpiar" OnClick="BtnLimpiar_Click"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            ID Socio: <asp:TextBox runat="server" ID="txtIdSocio2"></asp:TextBox>
+            <asp:Button runat="server" Text="Rellenar por ID" ID="BtnRellenar" OnClick="BtnRellenar_Click"/>
+        </div>
+    </div>
     <br />
-    <asp:Label  runat="server">Nombre de promoción: </asp:Label><asp:TextBox runat="server" ID="txtNombreProducto"></asp:TextBox>
+    Nombre de promoción: <asp:TextBox runat="server" ID="txtNombreProducto"></asp:TextBox>
     <asp:Button runat="server" Text="Buscar" ID="BtnBuscar" OnClick="BtnBuscar_Click"/>
 </asp:Content>

@@ -12,7 +12,7 @@ namespace FinalProject
     public partial class Login : System.Web.UI.Page
     {
         private string cCone = Conexion.cCone;
-        private string conexion = Conexion.conexion;
+        private string connection = Conexion.connection;
         protected void Page_Load(object sender, EventArgs e)
         {
             //using (var con = new MySqlConnection(cCone))
@@ -34,7 +34,7 @@ namespace FinalProject
 
         protected void loggeo(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(conexion);
+            MySqlConnection conn = new MySqlConnection(connection);
             conn.Open();
 
             string query = "Select * From users Where correo = ?correo or name_ = ?name";

@@ -4,17 +4,66 @@
     <br />
     <br />
     <br />
-    <asp:Label  runat="server">Nombre</asp:Label><asp:TextBox runat="server" ID="txtNombre"></asp:TextBox>
-    <asp:Label runat="server">Apellido paderno</asp:Label><asp:TextBox runat="server" ID="txtApellidoPaterno"></asp:TextBox>
-    <asp:Label runat="server">Apellido materno</asp:Label><asp:TextBox runat="server" ID="txtApellidoMaterno"></asp:TextBox>
-    <asp:Label runat="server">Teléfono</asp:Label><asp:TextBox runat="server" ID="txtTelefono"></asp:TextBox>
-    <asp:Label runat="server">Tipo de empleado</asp:Label><asp:TextBox runat="server" ID="txtTipoEmpleado"></asp:TextBox>
-    <asp:Label runat="server">Fecha de ingreso</asp:Label><asp:TextBox runat="server" ID="txtFechaIngreso"></asp:TextBox>
-    <asp:Label runat="server">Estatus</asp:Label><asp:TextBox runat="server" ID="txtEstatus"></asp:TextBox>
-    <asp:Label runat="server">Correo electrónico</asp:Label><asp:TextBox runat="server" ID="txtCorreo"></asp:TextBox>
-    <asp:Label runat="server">Contraseña</asp:Label><asp:TextBox runat="server" ID="txtContrasenia"></asp:TextBox>
-    <asp:Label runat="server">Confirma tu contraseña</asp:Label><asp:TextBox runat="server" ID="txtConfirmaContrasenia"></asp:TextBox>
-    Acepto los términos y condiciones
+    <div class="row">
+        <div class="col">
+            <h1>Registro</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Nombre: <asp:TextBox ForeColor="Black" runat="server" ID="txtNombre"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Apellido paderno: <asp:TextBox ForeColor="Black" runat="server" ID="txtApellidoPaterno"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Apellido materno: <asp:TextBox ForeColor="Black" runat="server" ID="txtApellidoMaterno"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Teléfono: <asp:TextBox ForeColor="Black" runat="server" ID="txtTelefono"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Tipo de empleado: <asp:TextBox ForeColor="Black" runat="server" ID="txtTipoEmpleado"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Fecha de ingreso: <asp:TextBox ForeColor="Black" runat="server" ID="txtFechaIngreso"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Estatus: <asp:DropDownList ForeColor="Black" runat="server" ID="ddlEstatus"></asp:DropDownList>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Correo electrónico: <asp:TextBox ForeColor="Black" runat="server" ID="txtCorreo"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Contraseña: <asp:TextBox ForeColor="Black" runat="server" ID="txtContrasenia"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Confirma tu contraseña: <asp:TextBox ForeColor="Black" runat="server" ID="txtConfirmaContrasenia"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Acepto los términos y condiciones
+        </div>
+    </div> 
 
-    <asp:Button runat="server" Text="Registrarse"/>
+    <asp:Button ForeColor="Black" runat="server" Text="Registrarse"/>
 </asp:Content>

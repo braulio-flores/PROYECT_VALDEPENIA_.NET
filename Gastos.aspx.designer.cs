@@ -24,13 +24,13 @@ namespace FinalProject
         protected global::System.Web.UI.WebControls.TextBox txtTipoGasto;
 
         /// <summary>
-        /// Control txtFecha.
+        /// Control dtFechaGasto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFecha;
+        protected global::System.Web.UI.WebControls.Calendar dtFechaGasto;
 
         /// <summary>
         /// Control txtTotal.
