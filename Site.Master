@@ -82,12 +82,16 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a role="button" runat="server" href="~/Membership">Membresía</a></li>
+                        <li><a role="button" runat="server" href="~/Membresia">Membresía</a></li>
                         <li><a role="button" runat="server" href="~/About">Sobre nosotros</a></li>
                         <li><a role="button" runat="server" href="~/Contact">Contacto</a></li>
-                        <li><a class="btn btn-success d-inline-block" runat="server" href="~/Register">Registro</a></li>
+                        <li><a role="button" runat="server" href="~/Gastos">Gastos</a></li>
+                        <li><a role="button" runat="server" href="~/Inventario">Inventario</a></li>
+                        <li><a role="button" runat="server" href="~/Promociones">Promociones</a></li>
+                        <li><a class="btn btn-success d-inline-block" runat="server" href="~/Registro">Registro</a></li>
                         <li><a class="btn btn-primary" runat="server" href="~/Login">Iniciar sesión</a></li>
-                        <li><a class="btn btn-danger" runat="server" href="~/Login">Cerrar sesión</a></li>
+                        <li><a class="btn btn-danger" runat="server" href="~/RecuperarContrasenia">RecuperarContrasenia</a></li>
+                        <li><a class="btn btn-danger" runat="server" href="~/Default">Cerrar sesión</a></li>
                     </ul>
                 </div>
             </div>
