@@ -15,13 +15,13 @@ namespace FinalProject
     {
 
         /// <summary>
-        /// Control txtIdProducto.
+        /// Control hiddenId.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdProducto;
+        protected global::System.Web.UI.WebControls.HiddenField hiddenId;
 
         /// <summary>
         /// Control txtNombre.
@@ -67,15 +67,6 @@ namespace FinalProject
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlEstatus;
-
-        /// <summary>
-        /// Control txtFecha.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFecha;
 
         /// <summary>
         /// Control txtDescripcion.
@@ -157,5 +148,14 @@ namespace FinalProject
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnBuscar;
+
+        /// <summary>
+        /// Control dgInventario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataGrid dgInventario;
     }
 }
