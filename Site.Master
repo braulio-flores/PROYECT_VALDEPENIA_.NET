@@ -91,7 +91,7 @@
                         <li><a class="btn btn-success d-inline-block" runat="server" href="~/Registro">Registro</a></li>
                         <li><a class="btn btn-primary" runat="server" href="~/Login">Iniciar sesión</a></li>
                         <li><a class="btn btn-danger" runat="server" href="~/RecuperarContrasenia">RecuperarContrasenia</a></li>
-                        <li><a class="btn btn-danger" runat="server" href="~/Default">Cerrar sesión</a></li>
+                        <li><asp:Button class="btn btn-danger" ID="cerrarSesion" runat="server" Text="Cerrar Sesión" OnClick="cerrarSesion_Click"/></li>
                     </ul>
                 </div>
             </div>

@@ -15,6 +15,9 @@ namespace FinalProject
         private string connection = Conexion.connection;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack) {
+                alertID.Text = "Bienvenido " + Session["UserName"] ;
+            }
             //using (var con = new MySqlConnection(cCone))
             //{
             //    con.Open();
@@ -37,7 +40,7 @@ namespace FinalProject
             MySqlConnection conn = new MySqlConnection(connection);
             conn.Open();
 
-            string query = "Select * From users Where correo = ?correo or name_ = ?name";
+            string query = "Select * From membresia Where email_miembro = ?correo or nom_miembro = ?name";
 
             MySqlCommand mycomand = new MySqlCommand(query, conn);
             mycomand.Parameters.AddWithValue("?correo", userid.Text);
@@ -50,9 +53,9 @@ namespace FinalProject
                 if (myreader["pass"].ToString() == txtBoxpass.Text)
                 {
                     alertID.Text = "Sesion Iniciada Correctamente";
-                    Session["UserName"] = myreader["name_"].ToString();
-                    Session["UserKind"] = myreader["kind"].ToString();
-                    alertID.Text = "Bienvenido " + Session["UserName"] + ", eres usuario tipo " + Session["UserKind"];
+                    Session["nom_miembro"] = myreader["name_"].ToString();
+                    //Session["tipo"] = myreader["kind"].ToString();
+                    alertID.Text = "Bienvenido " + Session["UserName"] + ", eres usuario tipo ";
                 }
                 else {
                     alertID.Text = "Olvidaste tu contraseña?";
