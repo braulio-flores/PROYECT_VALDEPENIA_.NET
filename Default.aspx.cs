@@ -11,7 +11,13 @@ namespace FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            welcomeLabel.Text = "Bienvenido " + Session["UserName"] + ", eres usuario tipo " + Session["tipo_usr"];
+            
+            if (Session["tipo_usr"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            
         }
     }
 }

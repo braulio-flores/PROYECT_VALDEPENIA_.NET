@@ -15,24 +15,14 @@ namespace FinalProject
         private string connection = Conexion.connection;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) {
-                alertID.Text = "Bienvenido " + Session["UserName"] ;
+            if (Session["UserName"] != null)
+            {
+                //SI EXISTE LA VARIABLE ES POR QUE YA HAY UNA SESION NO DEBERIA DE ESTAR AQUI
+                Response.Redirect("Default.aspx");
             }
-            //using (var con = new MySqlConnection(cCone))
-            //{
-            //    con.Open();
-            //    using (var cmd = new MySqlCommand("SELECT * FROM users", con))
-            //    {
-            //        using (var reader = cmd.ExecuteReader())
-            //        {
-            //            DropDownList1.DataSource = reader;
-            //            DropDownList1.DataValueField = "name_";
-            //            DropDownList1.DataTextField = "correo";
-            //            DropDownList1.DataBind();
-            //        }
-            //    }
-            //    con.Close();
-            //}
+            if (!IsPostBack) {
+                
+            }
         }
 
         protected void loggeo(object sender, EventArgs e)
@@ -53,9 +43,11 @@ namespace FinalProject
                 if (myreader["pass"].ToString() == txtBoxpass.Text)
                 {
                     alertID.Text = "Sesion Iniciada Correctamente";
-                    Session["nom_miembro"] = myreader["name_"].ToString();
+                    Session["UserName"] = myreader["nom_miembro"].ToString();
+                    Session["tipo_usr"] = myreader["tipo_usr"].ToString();
                     //Session["tipo"] = myreader["kind"].ToString();
-                    alertID.Text = "Bienvenido " + Session["UserName"] + ", eres usuario tipo ";
+                    Response.Redirect("Default.aspx");
+                    //alertID.Text = "Bienvenido " + Session["UserName"] + ", eres usuario tipo ";
                 }
                 else {
                     alertID.Text = "Olvidaste tu contraseña?";
@@ -69,8 +61,8 @@ namespace FinalProject
 
         protected void lnk1_Click(object sender, EventArgs e)
         {
-            Session["UserName"] = userid.Text;
-            Response.Redirect("testinLog.aspx");
+            //Session["UserName"] = userid.Text;
+            Response.Redirect("~/Registro.aspx");
         }
 
         protected void lnk2_Click(object sender, EventArgs e)

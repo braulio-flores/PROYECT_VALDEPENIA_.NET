@@ -15,6 +15,17 @@ namespace FinalProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            string sesionVal = "" + Session["tipo_usr"];
+            //Response.Redirect("Login.aspx");
+            if (Session["tipo_usr"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+            if (sesionVal == "0")
+            {
+                Response.Redirect("Default.aspx");
+            }
             if (!IsPostBack)
             {
                 using (var connection = new MySqlConnection(_connectionString))
