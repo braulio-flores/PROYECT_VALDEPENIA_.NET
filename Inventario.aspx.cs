@@ -15,6 +15,17 @@ namespace FinalProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            string sesionVal = "" + Session["tipo_usr"];
+            //Response.Redirect("Login.aspx");
+            if (Session["tipo_usr"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+            if (sesionVal == "0")
+            {
+                Response.Redirect("Default.aspx");
+            }
             BtnEliminar.Enabled = false;
             BtnModificar.Enabled = false;
            // txtPrecio.Text = string.Format("{0:#,##0.00}", double.Parse(txtPrecio.Text));

@@ -16,17 +16,22 @@
     </div> 
     <div class="row">
         <div class="col">
-            Apellido paderno: <asp:TextBox ForeColor="Black" runat="server" ID="txtApellidoPaterno"></asp:TextBox>
+            Apellido paterno: <asp:TextBox ForeColor="Black" runat="server" ID="txtApellidoPaterno"></asp:TextBox>
         </div>
     </div> 
     <div class="row">
         <div class="col">
-            Apellido materno: <asp:TextBox ForeColor="Black" runat="server" ID="txtApellidoMaterno"></asp:TextBox>
+            Fecha Nacimiento: <asp:TextBox ForeColor="Black" runat="server" ID="txtFechaNac"></asp:TextBox>
         </div>
     </div> 
     <div class="row">
         <div class="col">
             Teléfono: <asp:TextBox ForeColor="Black" runat="server" ID="txtTelefono"></asp:TextBox>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            Correo: <asp:TextBox ForeColor="Black" runat="server" ID="TextBoxCcorreo"></asp:TextBox>
         </div>
     </div> 
     <div class="row">
@@ -65,5 +70,13 @@
         </div>
     </div> 
 
-    <asp:Button ForeColor="Black" runat="server" Text="Registrarse"/>
+    <asp:Button ForeColor="Black" runat="server" Text="Registrarse" OnClick="SingUp"/>
+    <%--<asp:Label runat="server" ID="estatusRegistro"/>--%>
+    <%--<asp:TextBox runat="server" ID="estatusRegistro"></asp:TextBox>--%>
+    <asp:Label runat="server" ID="confirmLabelCcontent"  class="confirmLabel" Visible="false">
+        <asp:Label runat="server" ID="estatusRegistro2"/><br />
+        <a href="Login.aspx">Iniciar Sesión</a>
+    </asp:Label>
+    
+    
 </asp:Content>

@@ -111,3 +111,33 @@ a {
     .logginForm input[type="submit"]:hover {
         cursor: pointer;
     }
+
+.confirmLabel {
+    /*color: #f00;*/
+    /* position: absolute; */
+    background-color: var(--color-third);
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    width: 40rem;
+    height: 20rem;
+    border-radius: 10px;
+    text-align: center;
+    padding: 4rem;
+    font-size:3rem;
+}
+
+    .confirmLabel a {
+        display: block;
+        background: var(--color-second);
+        width: fit-content;
+        margin: auto;
+        padding: 5px;
+        font-size: 2rem;
+        margin-top: 10px;
+        padding: 7px;
+        border-radius: 10px;
+    }

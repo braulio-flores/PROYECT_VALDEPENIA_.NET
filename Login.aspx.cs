@@ -15,21 +15,14 @@ namespace FinalProject
         private string connection = Conexion.connection;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //using (var con = new MySqlConnection(cCone))
-            //{
-            //    con.Open();
-            //    using (var cmd = new MySqlCommand("SELECT * FROM users", con))
-            //    {
-            //        using (var reader = cmd.ExecuteReader())
-            //        {
-            //            DropDownList1.DataSource = reader;
-            //            DropDownList1.DataValueField = "name_";
-            //            DropDownList1.DataTextField = "correo";
-            //            DropDownList1.DataBind();
-            //        }
-            //    }
-            //    con.Close();
-            //}
+            if (Session["UserName"] != null)
+            {
+                //SI EXISTE LA VARIABLE ES POR QUE YA HAY UNA SESION NO DEBERIA DE ESTAR AQUI
+                Response.Redirect("Default.aspx");
+            }
+            if (!IsPostBack) {
+                
+            }
         }
 
         protected void loggeo(object sender, EventArgs e)
@@ -37,7 +30,7 @@ namespace FinalProject
             MySqlConnection conn = new MySqlConnection(connection);
             conn.Open();
 
-            string query = "Select * From users Where correo = ?correo or name_ = ?name";
+            string query = "Select * From membresia Where email_miembro = ?correo or nom_miembro = ?name";
 
             MySqlCommand mycomand = new MySqlCommand(query, conn);
             mycomand.Parameters.AddWithValue("?correo", userid.Text);
@@ -50,9 +43,11 @@ namespace FinalProject
                 if (myreader["pass"].ToString() == txtBoxpass.Text)
                 {
                     alertID.Text = "Sesion Iniciada Correctamente";
-                    Session["UserName"] = myreader["name_"].ToString();
-                    Session["UserKind"] = myreader["kind"].ToString();
-                    alertID.Text = "Bienvenido " + Session["UserName"] + ", eres usuario tipo " + Session["UserKind"];
+                    Session["UserName"] = myreader["nom_miembro"].ToString();
+                    Session["tipo_usr"] = myreader["tipo_usr"].ToString();
+                    //Session["tipo"] = myreader["kind"].ToString();
+                    Response.Redirect("Default.aspx");
+                    //alertID.Text = "Bienvenido " + Session["UserName"] + ", eres usuario tipo ";
                 }
                 else {
                     alertID.Text = "Olvidaste tu contraseña?";
@@ -66,8 +61,8 @@ namespace FinalProject
 
         protected void lnk1_Click(object sender, EventArgs e)
         {
-            Session["UserName"] = userid.Text;
-            Response.Redirect("testinLog.aspx");
+            //Session["UserName"] = userid.Text;
+            Response.Redirect("~/Registro.aspx");
         }
 
         protected void lnk2_Click(object sender, EventArgs e)

@@ -35,5 +35,40 @@ namespace FinalProject
                 }
             }
         }
+
+        protected void SingUp(object sender, EventArgs e)
+        {
+            string connection = Conexion.connection;
+            MySqlConnection conn = new MySqlConnection(connection);
+            conn.Open();
+
+            
+            string query = "INSERT INTO `membresia` (`membresia_id`, `nom_miembro`, `ape_miembro`, `fechanac_miembro`, `telefono_miembro`, `email_miembro`, `nom_estado`, `fechareg_miembro`, `estatus_miembro` , `pass`) " +
+                                                    "VALUES (NULL, ?name, ?apellido, ?fechaNac, ?tel, ?correo, ?estado, ?fechaReg, ?estatus, ?pass);";
+
+            MySqlCommand mycomand = new MySqlCommand(query, conn);
+            mycomand.Parameters.AddWithValue("?name", txtNombre.Text);
+            mycomand.Parameters.AddWithValue("?apellido", txtApellidoPaterno.Text);
+            mycomand.Parameters.AddWithValue("?fechaNac", txtFechaNac.Text);
+            mycomand.Parameters.AddWithValue("?tel", txtTelefono.Text);
+            mycomand.Parameters.AddWithValue("?correo", TextBoxCcorreo.Text);
+            mycomand.Parameters.AddWithValue("?estado", txtTipoEmpleado.Text);
+            mycomand.Parameters.AddWithValue("?fechaReg", txtFechaIngreso.Text);
+            mycomand.Parameters.AddWithValue("?estatus", ddlEstatus.SelectedValue);
+            mycomand.Parameters.AddWithValue("?pass", txtContrasenia.Text);
+
+            MySqlDataReader myreader = mycomand.ExecuteReader();
+
+            if (myreader.Read())
+            {
+                estatusRegistro2.Text = txtNombre.Text + " has sido registrado exitosamente";
+            }
+            else // SI EL REGISTRO SE HIZO EXITOSAMENTE
+            {
+                estatusRegistro2.Text = txtNombre.Text + ", has sido registrado exitosamente";
+                confirmLabelCcontent.Visible = true;                
+            }
+            conn.Close();
+        }
     }
 }
