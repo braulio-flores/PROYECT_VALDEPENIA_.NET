@@ -16,12 +16,12 @@
     </div> 
     <div class="row">
         <div class="col">
-            Apellido paterno: <asp:TextBox ForeColor="Black" runat="server" ID="txtApellidoPaterno"></asp:TextBox>
+            Apellido: <asp:TextBox ForeColor="Black" runat="server" ID="txtApellidoPaterno"></asp:TextBox>
         </div>
     </div> 
     <div class="row">
         <div class="col">
-            Fecha Nacimiento: <asp:TextBox ForeColor="Black" runat="server" ID="txtFechaNac"></asp:TextBox>
+            Fecha Nacimiento: <asp:TextBox type="date" ForeColor="Black" runat="server" ID="txtFechaNac"></asp:TextBox>
         </div>
     </div> 
     <div class="row">
@@ -31,19 +31,9 @@
     </div> 
     <div class="row">
         <div class="col">
-            Correo: <asp:TextBox ForeColor="Black" runat="server" ID="TextBoxCcorreo"></asp:TextBox>
+            Tipo de empleado: <asp:DropDownList ForeColor="Black" runat="server" ID="ddlTipoEmpleado"></asp:DropDownList>
         </div>
-    </div> 
-    <div class="row">
-        <div class="col">
-            Tipo de empleado: <asp:TextBox ForeColor="Black" runat="server" ID="txtTipoEmpleado"></asp:TextBox>
-        </div>
-    </div> 
-    <div class="row">
-        <div class="col">
-            Fecha de ingreso: <asp:TextBox ForeColor="Black" runat="server" ID="txtFechaIngreso"></asp:TextBox>
-        </div>
-    </div> 
+    </div>
     <div class="row">
         <div class="col">
             Estatus: <asp:DropDownList ForeColor="Black" runat="server" ID="ddlEstatus"></asp:DropDownList>
@@ -56,17 +46,12 @@
     </div> 
     <div class="row">
         <div class="col">
-            Contraseña: <asp:TextBox ForeColor="Black" runat="server" ID="txtContrasenia"></asp:TextBox>
+            Contraseña: <asp:TextBox TextMode="Password" ForeColor="Black" runat="server" ID="txtContrasenia"></asp:TextBox>
         </div>
     </div> 
     <div class="row">
         <div class="col">
-            Confirma tu contraseña: <asp:TextBox ForeColor="Black" runat="server" ID="txtConfirmaContrasenia"></asp:TextBox>
-        </div>
-    </div> 
-    <div class="row">
-        <div class="col">
-            Acepto los términos y condiciones
+            Confirma tu contraseña: <asp:TextBox TextMode="Password" ForeColor="Black" runat="server" ID="txtConfirmaContrasenia"></asp:TextBox>
         </div>
     </div> 
 

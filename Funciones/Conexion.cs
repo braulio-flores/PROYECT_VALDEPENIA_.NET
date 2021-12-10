@@ -9,8 +9,8 @@ namespace FinalProject.Funciones
         public static string cCone = "Server=localhost;UserID=root;Database=valdepeniaproject;Password=root";
 
         //Conexion AXEL
-        //public static string connection = "Server=localhost;Database=valdepeniaproject;User ID=root;Password=Suripanta.98;Pooling=false;";
+        public static string connection = "Server=localhost;Database=valdepeniaproject;User ID=root;Password=Suripanta.98;Pooling=false;";
         //Conexion BRAULIO, SOLO CAMBIA EL PASS**
-        public static string connection = "Server=localhost;Database=valdepeniaproject;User ID=root;Password=root;Pooling=false;";
+        //public static string connection = "Server=localhost;Database=valdepeniaproject;User ID=root;Password=root;Pooling=false;";
     }
 }

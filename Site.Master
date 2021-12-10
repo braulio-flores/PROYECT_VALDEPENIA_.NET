@@ -42,28 +42,6 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-        <%--<div class="navbar navbar-inverse navbar-fixed-top header header">
-            <a runat="server" href="~/About.aspx">
-                <img width="90" src="Images/LOGO2.png" />
-            </a>
-            <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Membership">Membresía</a></li>
-                        <li><a class="btn btn-danger" runat="server" href="~/Login">Inicia sesión</a></li>
-                    </ul>
-                    <ul>    
-                        <li class="headerElement"><a runat="server" href="~/About.aspx">Membresía</a></li>
-                        <li class="headerElement"><a runat="server" href="~/About.aspx">Sobre nosotros</a></li>
-                        <li class="headerElement"><a runat="server" href="~/About.aspx">Contacto</a></li>
-
-                        <%--Dinámicos--
-                        <li class="headerElement"><a class="btn btn-success" runat="server" href="~/About.aspx">Registro</a></li>
-                        <li class="headerElement"><a class="btn btn-primary" runat="server" href="~/About.aspx">Iniciar sesión</a></li>
-                        <li class="headerElement"><a class="btn btn-danger" runat="server" href="~/About.aspx">Cerrar sesión</a></li>
-                    </ul>
-                </div>
-            
-        </div>--%>
           
         <div class="navbar  navbar-fixed-top header">
             <div class="container">
@@ -82,16 +60,9 @@
                 </div>
                 <asp:ContentPlaceHolder ID="navMain" runat="server" Visible="false">
                     <ul class="nav navbar-nav">
-                        <li><a role="button" runat="server" href="~/Membresia">Membresía</a></li>
                         <li><a role="button" runat="server" href="~/About">Sobre nosotros</a></li>
                         <li><a role="button" runat="server" href="~/Contact">Contacto</a></li>
-                        <%--<li><a role="button" runat="server" href="~/Gastos">Gastos</a></li>--%>
-                        <%--<li><a role="button" runat="server" href="~/Inventario">Inventario</a></li>--%>
-                        <%--<li><a role="button" runat="server" href="~/Promociones">Promociones</a></li>--%>
                         <li><a class="btn btn-success d-inline-block" runat="server" href="~/Registro">Registro</a></li>
-                        <li><a class="btn btn-primary" runat="server" href="~/Login">Iniciar sesión</a></li>
-                        <li><a class="btn btn-danger" runat="server" href="~/RecuperarContrasenia">RecuperarContrasenia</a></li>
-                        <%--<li><asp:Button class="btn btn-danger" ID="cerrarSesion" runat="server" Text="Cerrar Sesión" OnClick="cerrarSesion_Click"/></li>--%>
                     </ul>
                 </asp:ContentPlaceHolder>
                 <asp:ContentPlaceHolder ID="navLogUser" runat="server" Visible="false">
@@ -111,14 +82,9 @@
                 <asp:ContentPlaceHolder ID="navLogAdm" runat="server" Visible="false">
                     <ul class="nav navbar-nav">
                         <%--<li><a role="button" runat="server" href="~/Membresia">Membresía</a></li>--%>
-                        <li><a role="button" runat="server" href="~/About">Sobre nosotros</a></li>
-                        <li><a role="button" runat="server" href="~/Contact">Contacto</a></li>
                         <li><a role="button" runat="server" href="~/Gastos">Gastos</a></li>
                         <li><a role="button" runat="server" href="~/Inventario">Inventario</a></li>
                         <li><a role="button" runat="server" href="~/Promociones">Promociones</a></li>
-                        <%--<li><a class="btn btn-success d-inline-block" runat="server" href="~/Registro">Registro</a></li>--%>
-                        <%--<li><a class="btn btn-primary" runat="server" href="~/Login">Iniciar sesión</a></li>--%>
-                        <%--<li><a class="btn btn-danger" runat="server" href="~/RecuperarContrasenia">RecuperarContrasenia</a></li>--%>
                         <li><asp:Button class="btn btn-danger" ID="Button2" runat="server" Text="Cerrar Sesión" OnClick="cerrarSesion_Click"/></li>
                     </ul>
                 </asp:ContentPlaceHolder>
@@ -141,10 +107,6 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
-            </footer>
         </div>
 
     </form>

@@ -32,6 +32,21 @@ namespace FinalProject
                             }
                         }
                     }
+                    using (var cmd = new MySqlCommand("SELECT tipoempleado_id, nom_tipoempleado FROM tipoempleado", connection))
+                    {
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                ddlTipoEmpleado.DataSource = reader;
+                                ddlTipoEmpleado.DataTextField = "nom_tipoempleado";
+                                ddlTipoEmpleado.DataValueField = "tipoempleado_id";
+                                ddlTipoEmpleado.DataBind();
+                            }
+                        }
+                    }
+                    connection.Close();
+                    connection.Dispose();
                 }
             }
         }
@@ -44,16 +59,15 @@ namespace FinalProject
 
             
             string query = "INSERT INTO `membresia` (`membresia_id`, `nom_miembro`, `ape_miembro`, `fechanac_miembro`, `telefono_miembro`, `email_miembro`, `nom_estado`, `fechareg_miembro`, `estatus_miembro` , `pass`) " +
-                                                    "VALUES (NULL, ?name, ?apellido, ?fechaNac, ?tel, ?correo, ?estado, ?fechaReg, ?estatus, ?pass);";
+                                                    "VALUES (NULL, ?name, ?apellido, ?fechaNac, ?tel, ?correo, ?estado, sysdate(), ?estatus, ?pass);";
 
             MySqlCommand mycomand = new MySqlCommand(query, conn);
             mycomand.Parameters.AddWithValue("?name", txtNombre.Text);
             mycomand.Parameters.AddWithValue("?apellido", txtApellidoPaterno.Text);
             mycomand.Parameters.AddWithValue("?fechaNac", txtFechaNac.Text);
             mycomand.Parameters.AddWithValue("?tel", txtTelefono.Text);
-            mycomand.Parameters.AddWithValue("?correo", TextBoxCcorreo.Text);
-            mycomand.Parameters.AddWithValue("?estado", txtTipoEmpleado.Text);
-            mycomand.Parameters.AddWithValue("?fechaReg", txtFechaIngreso.Text);
+            mycomand.Parameters.AddWithValue("?correo", txtCorreo.Text);
+            mycomand.Parameters.AddWithValue("?estado", ddlTipoEmpleado.Text);
             mycomand.Parameters.AddWithValue("?estatus", ddlEstatus.SelectedValue);
             mycomand.Parameters.AddWithValue("?pass", txtContrasenia.Text);
 

@@ -11,7 +11,6 @@ namespace FinalProject
 {
     public partial class Login : System.Web.UI.Page
     {
-        private string cCone = Conexion.cCone;
         private string connection = Conexion.connection;
         protected void Page_Load(object sender, EventArgs e)
         {

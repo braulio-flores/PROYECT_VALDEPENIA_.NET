@@ -4,9 +4,8 @@
     <h1>Bienvenido a PetShop</h1>
     <div class="logginForm">
         <div class="class-log">
-            <div>Inicia Sesion para poder hacer uso del sistema de la mejor manera</div>
-            <asp:Label Text="Correo o usuario:" runat="server" />
-            <%--<asp:TextBox runat="server" placeholder="example@example.com" ID="txtBoxUser"/>--%>
+            <div>Inicia sesión para poder hacer uso del sistema</div>
+            <asp:Label Text="Correo o usuario: " runat="server" />
             <asp:TextBox runat="server" placeholder="example@example.com" ID="userid"/>
             <br />
             <asp:Label Text="Contraseña:" runat="server" />
