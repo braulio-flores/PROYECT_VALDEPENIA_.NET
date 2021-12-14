@@ -72,7 +72,8 @@ namespace FinalProject
             using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
-                string strCommand = $"INSERT INTO producto(nom_promocion, porcentaje_promocion, des_promocion, fecha_promocion, estatus_promocion) VALUES('{txtNombre.Text}', {Convert.ToInt32(txtPorcentaje.Text)}, '{txtDescripcion.Text}', '{txtFechaTermino.Text}', '{ddlEstatus.SelectedValue}')";
+                //AQUI DECIA PRODUCTO, PERO ES PROMOCION NO?
+                string strCommand = $"INSERT INTO promocion(nom_promocion, porcentaje_promocion, des_promocion, fecha_promocion, estatus_promocion) VALUES('{txtNombre.Text}', {Convert.ToInt32(txtPorcentaje.Text)}, '{txtDescripcion.Text}', '{txtFechaTermino.Text}', '{ddlEstatus.SelectedValue}')";
                 using (var cmd = new MySqlCommand(strCommand, connection))
                 {
                     int rowsAffected = cmd.ExecuteNonQuery();
@@ -82,7 +83,8 @@ namespace FinalProject
                         BindData();
                     }
                 }
-                using (var cmd = new MySqlCommand("SELECT * FROM producto", connection))
+                //AQUI TAMBIEN DECIA PRODUCTO PERO CREO IGUal ES PROMOCION
+                using (var cmd = new MySqlCommand("SELECT * FROM PROMOCION", connection))
                 {
                     using (var reader = cmd.ExecuteReader())
                     {
