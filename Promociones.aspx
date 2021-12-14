@@ -62,11 +62,11 @@
                     <Columns>  
                         <asp:BoundColumn HeaderText="Clave" DataField="promocion_id" Visible="false"></asp:BoundColumn>
                         <asp:ButtonColumn HeaderText="Seleccionar" ButtonType="LinkButton" Text="Seleccionar" CommandName="Select"></asp:ButtonColumn>
-                        <asp:BoundColumn HeaderText="Nombre" DataField="nom_promocion" HeaderStyle-Width="100"></asp:BoundColumn>
+                        <asp:BoundColumn HeaderText="Nombre" DataField="nom_promocion" HeaderStyle-Width="200" ItemStyle-HorizontalAlign="Center"></asp:BoundColumn>
                         <asp:BoundColumn HeaderText="Porcentaje" DataField="porcentaje_promocion" HeaderStyle-Width="100" ItemStyle-HorizontalAlign="Center"></asp:BoundColumn>
-                        <asp:BoundColumn HeaderText="Fecha término" DataField="fecha_promocion" HeaderStyle-Width="100"></asp:BoundColumn>
+                        <asp:BoundColumn HeaderText="Fecha término" DataField="fecha_promocion" HeaderStyle-Width="200" ItemStyle-HorizontalAlign="Center"></asp:BoundColumn>
                         <asp:BoundColumn HeaderText="Estado" DataField="estatus_promocion" HeaderStyle-Width="100" ItemStyle-HorizontalAlign="Center"></asp:BoundColumn>
-                        <asp:BoundColumn HeaderText="Descripción" DataField="des_promocion" HeaderStyle-Width="100"></asp:BoundColumn>  
+                        <asp:BoundColumn HeaderText="Descripción" DataField="des_promocion" HeaderStyle-Width="300"></asp:BoundColumn>  
                         <asp:EditCommandColumn EditText="Editar" HeaderText="Editar" HeaderStyle-Width="100" ItemStyle-HorizontalAlign="Center"> </asp:EditCommandColumn>  
                     </Columns>  
                     <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />  

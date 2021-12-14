@@ -106,7 +106,7 @@ namespace FinalProject
             using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
-                string uptadeCommand = $"UPDATE producto SET nom_promocion = '{txtNombre.Text}', porcentaje_promocion = {Convert.ToInt32(txtPorcentaje.Text)}, des_promocion = '{txtDescripcion.Text}', fecha_promocion = '{txtFechaTermino.Text}', estatus_promocion = '{ddlEstatus.SelectedValue}' WHERE promocion_id = {Convert.ToInt32(hiddenId.Value)}";
+                string uptadeCommand = $"UPDATE promocion SET nom_promocion = '{txtNombre.Text}', porcentaje_promocion = {Convert.ToInt32(txtPorcentaje.Text)}, des_promocion = '{txtDescripcion.Text}', fecha_promocion = '{txtFechaTermino.Text}', estatus_promocion = '{ddlEstatus.SelectedValue}' WHERE promocion_id = {Convert.ToInt32(hiddenId.Value)}";
                 using (var cmd = new MySqlCommand(uptadeCommand, connection))
                 {
                     int rowsAffected = cmd.ExecuteNonQuery();
@@ -250,7 +250,7 @@ namespace FinalProject
             using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
-                using (var cmd = new MySqlCommand($"SELECT * FROM promocion WHERE producto_id = {promocionId}", connection))
+                using (var cmd = new MySqlCommand($"SELECT * FROM promocion WHERE promocion_id = {promocionId}", connection))
                 {
                     using (var reader = cmd.ExecuteReader())
                     {
@@ -266,7 +266,7 @@ namespace FinalProject
                                 txtFechaTermino.Text = reader["fecha_promocion"].ToString();
                                 var res = reader["estatus_promocion"].ToString();
                                 ddlEstatus.SelectedIndex = (Convert.ToInt32(reader["estatus_promocion"]) == 1) ? 0 : 1;
-                                txtDescripcion.Text = reader["des_producto"].ToString();
+                                txtDescripcion.Text = reader["des_promocion"].ToString();
 
                                 BtnGuardar.Enabled = false;
                                 BtnEliminar.Enabled = true;
