@@ -11,7 +11,7 @@
                 <asp:HiddenField ID="hiddenId" runat="server"/>
             </td>
         </tr>
-        <tr>
+        <tr class="adminForm">
             <td colspan="2"></td>
             <td colspan="2">
                 Nombre de la promoción: <asp:TextBox ForeColor="Black" runat="server" ID="txtNombre"></asp:TextBox> 
@@ -27,7 +27,7 @@
             </td>
             
         </tr>
-        <tr>
+        <tr class="adminForm">
             <td colspan="2"></td>
             <td colspan="2">
                Fecha inicio: <asp:TextBox type="date" ForeColor="Black" runat="server" ID="txtFechaInicio"></asp:TextBox>
@@ -42,13 +42,13 @@
                 <asp:RequiredFieldValidator ValidationGroup="GuardarGroup" runat="server" ErrorMessage="Selecciona el estado de la promoción" ControlToValidate="ddlEstatus" ForeColor="red"></asp:RequiredFieldValidator>
             </td>
         </tr>
-        <tr align="center">
+        <tr align="center" class="adminForm">
             <td colspan="8">
                 Nombre de promoción: <asp:TextBox ForeColor="Black" runat="server" ID="txtNombrePromocion"></asp:TextBox>
                 <asp:Button ForeColor="Black" runat="server" Text="Buscar" ID="BtnBuscar" OnClick="BtnBuscar_Click"/>
             </td>
         </tr>
-        <tr align="center">
+        <tr align="center" class="adminForm">
             <td colspan="8">
                 <asp:Button ValidationGroup="GuardarGroup" ForeColor="Black" runat="server" Text="Guardar" ID="BtnGuardar" OnClick="BtnGuardar_Click"/>
                 <asp:Button ForeColor="Black" runat="server" Text="Modificar" ID="BtnModificar" OnClick="BtnModificar_Click"/>

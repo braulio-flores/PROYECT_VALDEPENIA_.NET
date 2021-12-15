@@ -4,14 +4,14 @@
     <br />
     <br />
     <br />
-    <table style="border-collapse:separate; border-spacing:0 15px;">
+    <table style="border-collapse:separate; border-spacing:0 15px;padding: 0px 40px;">
         <tr>
             <td colspan="8">
                 <h1>Inventario</h1>
                 <asp:HiddenField ID="hiddenId" runat="server"/>
             </td>
         </tr>
-        <tr>
+        <tr class="adminForm">
             <td>
                 Nombre: <asp:TextBox ForeColor="Black" runat="server" ID="txtNombre"></asp:TextBox> 
                 <asp:RequiredFieldValidator ValidationGroup="GuardarGroup" runat="server" ErrorMessage="Ingresa el nombre del producto" ControlToValidate="txtNombre" ForeColor="red"></asp:RequiredFieldValidator>
@@ -37,7 +37,7 @@
                 <asp:RequiredFieldValidator ValidationGroup="GuardarGroup" runat="server" ErrorMessage="Ingresa una descripción del producto" ControlToValidate="txtDescripcion" ForeColor="red"></asp:RequiredFieldValidator>
             </td>
         </tr>
-        <tr align="center">
+        <tr align="center" class="adminForm">
             <td colspan="8">
                 <asp:Button ValidationGroup="GuardarGroup" ForeColor="Black" runat="server" Text="Guardar" ID="BtnGuardar" OnClick="BtnGuardar_Click"/>
                 <asp:Button ForeColor="Black" runat="server" Text="Modificar" ID="BtnModificar" OnClick="BtnModificar_Click"/>

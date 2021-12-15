@@ -63,6 +63,7 @@
                         <li><a role="button" runat="server" href="~/About">Sobre nosotros</a></li>
                         <li><a role="button" runat="server" href="~/Contact">Contacto</a></li>
                         <li><a class="btn btn-success d-inline-block" runat="server" href="~/Registro">Registro</a></li>
+                        <li><a class="btn btn-primary" runat="server" href="~/Login">Iniciar sesión</a></li>
                     </ul>
                 </asp:ContentPlaceHolder>
                 <asp:ContentPlaceHolder ID="navLogUser" runat="server" Visible="false">
@@ -104,7 +105,7 @@
                 </div>--%>
             </div>
         </div>
-        <div class="container body-content">
+        <div class="body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>

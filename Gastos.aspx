@@ -11,7 +11,7 @@
                 <asp:HiddenField ID="hiddenId" runat="server"/>
             </td>
         </tr>
-        <tr>
+        <tr class="adminForm">
             <td>
                 Tipo de gasto: <asp:TextBox ForeColor="Black" runat="server" ID="txtTipoGasto"></asp:TextBox>
                 <asp:RequiredFieldValidator ValidationGroup="GuardarGroup" runat="server" ErrorMessage="Ingresa el tipo de gasto" ControlToValidate="txtTipoGasto" ForeColor="red"></asp:RequiredFieldValidator>
@@ -31,7 +31,7 @@
                 <asp:RequiredFieldValidator ValidationGroup="GuardarGroup" runat="server" ErrorMessage="Ingresa la fecha del gasto" ControlToValidate="txtFechaGasto" ForeColor="red"></asp:RequiredFieldValidator>
             </td>
         </tr>
-        <tr align="center">
+        <tr align="center" class="adminForm">
             <td colspan="8">
                 <asp:Button ValidationGroup="GuardarGroup" ForeColor="Black" runat="server" Text="Guardar" ID="BtnGuardar" OnClick="BtnGuardar_Click"/>
                 <asp:Button ForeColor="Black" runat="server" Text="Modificar" ID="BtnModificar" OnClick="BtnModificar_Click"/>

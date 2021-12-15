@@ -6,9 +6,10 @@
 
 /*Del código de Braulio*/
 body {
-    background-color: var(--color-main);
-    color: var(--color-second);
-    font-family: 'Dosis', sans-serif;
+    /*background-color: var(--color-main);*/
+    background-color: var(--color-second);
+    color: var(--color-fourth);
+    /*font-family: 'Dosis', sans-serif;*/
 }
 
 /* Wrapping element */
@@ -26,7 +27,8 @@ textarea {
 }
 
 .header {
-    background-color: #2bb9d0;
+    /*background-color: #2bb9d0;*/
+    background-color: var(--color-main);
 }
 
 .headerElement {
@@ -68,6 +70,7 @@ textarea {
 }
 
 .logginForm {
+    top: 80px;
     background: var(--color-third);
     display: inline-block;
     margin: auto;
@@ -77,10 +80,13 @@ textarea {
     width: fit-content;
     padding: 30px;
     border-radius: 10px;
-    margin-top: 10px;
     color: var(--color-fourth);
     font-size: 1.5rem;
     text-align: center;
+    margin: auto;
+    bottom: 0px;
+    height: fit-content;
+    padding-top: 5px;
 }
 
     .logginForm input[type="text"], .logginForm input[type="password"] {
@@ -94,6 +100,7 @@ textarea {
 
 .logginUl {
     list-style: none;
+    padding:0px;
 }
 
 a {
@@ -101,7 +108,7 @@ a {
 }
 
 .logginForm input[type="submit"] {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-top: 20px;
     padding: 10px;
     border-radius: 10px;
@@ -113,9 +120,9 @@ a {
     }
 
 .confirmLabel {
-    /*color: #f00;*/
+    color: #f00;
     /* position: absolute; */
-    background-color: var(--color-third);
+    background-color: var(--color-main);
     position: absolute;
     margin: auto;
     top: 0px;
@@ -123,11 +130,11 @@ a {
     right: 0px;
     left: 0px;
     width: 40rem;
-    height: 20rem;
+    height: fit-content;
     border-radius: 10px;
     text-align: center;
     padding: 4rem;
-    font-size:3rem;
+    font-size: 3rem;
 }
 
     .confirmLabel a {
@@ -179,8 +186,68 @@ a {
 .dispProduct {
     border: 2px solid #000;
     border-radius: 15px;
-    background-color: var(--color-fourth);
-    margin-top: 30px;
+    background-color: var(--color-third);
     box-shadow: 10px 10px 10px 10px;
     margin-bottom: 110px;
+    margin: 30px;
+    
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.nav {
+    align-self: center;
+    display:flex;
+}
+
+    .nav > li > a {
+        margin-left:10px;
+    }
+
+.nav li{
+    align-self: center;
+}
+
+h1,h2 {
+    text-align:center;
+}
+
+#MainContent_welcomeLabel {
+    filter:blur(1px);
+}
+
+.adminForm {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 1.5rem;
+}
+
+
+    .adminForm input[type="text"], .adminForm input[type="password"], .adminForm input[type="number"], .adminForm select, .adminForm input[type="date"] {
+        border-radius: 10px;
+        color: var(--color-main);
+        padding: 10px;
+        border: 0px;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        border: 1px solid #000;
+    }
+
+
+
+    .adminForm input[type="submit"] {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 0px;
+    }
+
+        .adminForm input[type="submit"]:hover {
+            cursor: pointer;
+        }
