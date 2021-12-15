@@ -4,7 +4,7 @@
     <br />
     <br />
     <br />
-    <table style="border-collapse:separate; border-spacing:0 15px;">
+    <table style="border-collapse:separate; border-spacing:0 15px;padding: 0px 40px;">
         <tr>
             <td colspan="8">
                 <h1>Gastos generales</h1>
